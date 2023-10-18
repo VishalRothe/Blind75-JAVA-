@@ -1,0 +1,36 @@
+class Solution {
+    public int kthFactor(int n, int k) {
+        int count =0;
+        int result=0;
+        for(int i=1;i<=n;i++)
+        {
+            if(n%i==0)
+            {
+                count++;
+                result=i;
+            }
+            if(count==k)
+            break;
+         
+
+        }
+        if(count==k)
+        return result;
+        else
+        return -1;
+        
+        
+    }
+}
+/*
+Input: n = 12, k = 3
+Output: 3
+Explanation: Factors list is [1, 2, 3, 4, 6, 12], the 3rd factor is 3.
+
+Input: n = 4, k = 4
+Output: -1
+Explanation: Factors list is [1, 2, 4], there is only 3 factors. We should return -1.
+
+
+
+*/
